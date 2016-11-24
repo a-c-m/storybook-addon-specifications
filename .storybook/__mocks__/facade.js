@@ -11,6 +11,11 @@ export const storiesOf = function storiesOf() {
     snapshot(name, story);
     return api;
   };
+  // api.addDecorator = (name, func) == TypeError: func is not a function
+  api.addDecorator = (func)=> { // == TypeError: Cannot read property 'kind' of undefined
+    func();
+    return api;
+  };
   return api;
 };
 export const action = () => {};
@@ -38,4 +43,3 @@ export const xdescribe = jasmine.currentEnv_.xdescribe;
 export const fit = jasmine.currentEnv_.fit;
 export const after = () => {};
 export const before = () => {};
-

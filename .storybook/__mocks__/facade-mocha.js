@@ -8,10 +8,6 @@ export const storiesOf = function storiesOf() {
     func();
     return api;
   };
-  api.addDecorator = (name, func)=> {
-    func();
-    return api;
-  };
   return api;
 };
 export const action = () => {};
