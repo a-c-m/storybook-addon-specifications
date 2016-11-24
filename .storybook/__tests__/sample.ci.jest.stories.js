@@ -54,6 +54,7 @@ stories.add('Hello Earth', function () {
   return helloEarthStory;
 });
 
+stories.addDecorator(withKnobs);
 stories.add('Hello Knobs', function () {
   const helloEarthStory =
     <button onClick={action('Hello Knobs')}>
