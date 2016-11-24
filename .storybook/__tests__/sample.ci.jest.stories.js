@@ -5,6 +5,7 @@ fit, xit} from "../facade";
 import {mount} from "enzyme";
 import expect from "expect";
 
+import { withKnobs, text } from '@kadira/storybook-addon-knobs';
 
 const stories = storiesOf('Button - CI JEST Sample', module);
 
@@ -49,6 +50,15 @@ stories.add('Hello Earth', function () {
       expect(output.text()).toContain('Hello Earth');
     });
   }));
+
+  return helloEarthStory;
+});
+
+stories.add('Hello Knobs', function () {
+  const helloEarthStory =
+    <button onClick={action('Hello Knobs')}>
+      {text('Button Text', 'Hello Knobs')}
+    </button>;
 
   return helloEarthStory;
 });

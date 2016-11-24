@@ -50,6 +50,7 @@
     "rimraf": "^2.5.4"
   },
   "dependencies": {
+    "@kadira/storybook-addon-knobs": "^1.6.0",
     "aphrodite": "^0.5.0"
   },
   "peerDependencies": {
